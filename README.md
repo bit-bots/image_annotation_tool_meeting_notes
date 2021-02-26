@@ -11,7 +11,7 @@ Teams present:
  * NUBots
  * B-Human
  * Bembelbots
- * 01. RFC Berlin
+ * 01\. RFC Berlin
  * ICHIRO
 
 
@@ -342,11 +342,9 @@ Showing who labeled or verified an annotation might be useful for
 * is currently not needed, but relatively easy to implement for some conversions
 	* others are really hard or impossible
 
-## Final Discussion (@Timon and Jan what is this)
-Classification should be possible? DNT seems to use it
-    - can be solved with the annotations, but could also be a separate class
-
-multiple annotations per pixel 
+## Final Discussion
+Tools for simple classifification (e.g. is this image a ball) should be handled in a different mode
+    - labeling for classification is solved with the annotations, but is probably faster in a different mode
 
 
 ## Goodbye and Thank you
