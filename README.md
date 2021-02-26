@@ -232,14 +232,13 @@ DVC (https://dvc.org)
 
 
 ### Verification (Q12)
-TODO!!!!
 * if only one person labels a set, there can be a lot of errors
-* get an overview of all annotations to verify
-* etc, many different use cases
-* find false negatives/missing labels, e.g. in time series
-* full image view with all labels that can be verified at once (is faster) or point out problems
-* two workflows identified: verify as good or bad and fix bad labels afterwards vs. verify or fix immediately
-* assign label tag for manually corrected labels (see metadata)
+* an overview of all annotations to verify in an image might be useful
+* a time series view might be useful to speed up verification
+* two workflows identified:
+	* verify as good or bad and fix bad labels afterwards 
+	* verify or fix immediately
+* manually corrected labels should be tagged (see metadata)
 
 
 ### Import formats (Q13)
