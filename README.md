@@ -162,6 +162,11 @@ Each subsection refers to one or multiple questions as given in the title.
 * polygons, lines, multi-lines are not as essential as bounding boxes but also very needed
 * NUBots represent their labels in different formats than most teams since they do their computer vision in 3D https://www.youtube.com/watch?v=FhJwdtnVusY
 
+![plot1](plots/1.png)
+![plot1](plots/2.png)
+![plot1](plots/3.png)
+![plot1](plots/4.png)
+
 ### Labeling Process (Q5)
 Characteristics of a simple fast and intuitive tool:
 * optimize for fewer clicks/less time
@@ -172,6 +177,7 @@ Characteristics of a simple fast and intuitive tool:
 * "magic wand" tool for segmentation
 * modify existing labels should be straight forward
 
+![plot1](plots/5.png)
 
 ### Metadata (Q6)
 Three types of metadata:
@@ -197,12 +203,15 @@ General Requirements:
 * ability to bisect dataset by metadata
 * freely choosable tags which can be merged and filtered
 
+![plot1](plots/6.png)
 
 ### Color spaces (Q7)
 * Currently used colorspaces: RGGB, YCbCr, Grayscale, RGB, YUV, bayer
 * Display in RGB, but internal store in original color spaces (prevents loss)
 * Nubots convert images between color spaces "on the fly" using webgl
 * exportable in other color spaces
+
+![plot1](plots/7.png)
 
 ### Collaboration (Q8)
 * i.e. label with multiple people
@@ -211,6 +220,7 @@ General Requirements:
 * Mode to allow arbitrary number of labelers: show "random" (i.e. not labeled of not many labels) images
 	* ability to show (time-)context (in case of uncertain occurencies)
 
+![plot1](plots/8.png)
 
 ### Data sharing (Q9)
 * sharing of final datasets is generally regarded as good
@@ -220,6 +230,7 @@ General Requirements:
 	*  https://logs.naoth.de/
 	*  https://imagetagger.bit-bots.de (login required)
 
+![plot1](plots/9.png)
 
 ### Dataset Management (Q10-Q11)
 * metadata to filter/sort/query
@@ -230,6 +241,8 @@ General Requirements:
 DVC (https://dvc.org)
 * needed by some teams, could be more interesting in the future for other teams since it seems to become an industry standard
 
+![plot1](plots/10.png)
+![plot1](plots/11.png)
 
 ### Verification (Q12)
 * if only one person labels a set, there can be a lot of errors
@@ -240,10 +253,13 @@ DVC (https://dvc.org)
 	* verify or fix immediately
 * manually corrected labels should be tagged (see metadata)
 
+![plot1](plots/12.png)
 
 ### Import formats (Q13)
 * a team should be able to write modules for import/export (or a local solution)
 * one standard format often does not work to represent all use cases
+
+![plot1](plots/13.png)
 
 ### Hosted Web App (Q14)
 * pro:
@@ -259,10 +275,14 @@ DVC (https://dvc.org)
 * labeling could happen offline, online could just compare labels
 * before uploading: somehow legally assure the rights
 
+![plot1](plots/14.png)
+
 ### Automatic Annotation in the "Cloud" (Q15)
 * most don't need it, nice to have
 * workflow is covered with download -> generate labels -> upload
 * it needlessly complicates things
+
+![plot1](plots/15.png)
 
 ### Fast switch between verification and editing view (Q16)
 * depends on verification workflow, is only necessary for verify with immediate editing
@@ -270,11 +290,14 @@ DVC (https://dvc.org)
 * or edit and verify are on the same view? 
 	* might be less intuitive since there are more buttons on the interface
 
+![plot1](plots/16.png)
+
 ### Highlighting false positives / false negatives (Q17)
 * highlight not necessary, just remember the false positive/negative label to later improve the network
 * can be used in feedback for training
 * could be implemented as metadata for labels (see metadata)
 
+![plot1](plots/17.png)
 
 ### Webhooks and API (Q18)
 If a tool is a web app, the following webhooks might be useful:
@@ -287,14 +310,18 @@ The API should cover the following requirements:
 * everything on the web site should be in the API
 * REST APIs are query based, special requests could be used for subscriptions
 
+![plot1](plots/18.png)
 
 ### Synthetic data (Q19)
 Synthetic data can be easily identified using metadata tags (of the imageset).
 
+![plot1](plots/19.png)
 
 ### Stereo Images (Q20)
 * not used by most teams
 * images and their labels are linked as a pair would be sufficient
+
+![plot1](plots/20.png)
 
 ### Export Formats (Q21)
 * manually specified annotation output formats (json, xml, ... and yolo darknet) are generally good
@@ -306,6 +333,7 @@ Synthetic data can be easily identified using metadata tags (of the imageset).
 * png with embedded annotations and metadata may also be required
 * download annotations and images together, e.g. in a tar ball
 
+![plot1](plots/21.png)
 
 ### Versioning (with or without git) (Q22-23)
 * fixed versions enable repeatablity and comparison and is therefore desirable
@@ -318,9 +346,14 @@ Synthetic data can be easily identified using metadata tags (of the imageset).
 	* or revision numbers
 * view differences between versions might be useful
 
+![plot1](plots/22.png)
+![plot1](plots/23.png)
+
 ### Labeling jobs (who, which images, which labels) (Q24)
 * Assigning the dataset to persons is not always desired, but choosing a labeling job is good
 * This task may not belong to the image annotation tool
+
+![plot1](plots/24.png)
 
 ### Show who labeled / verified what (Q25)
 Showing who labeled or verified an annotation might be useful for
@@ -328,18 +361,26 @@ Showing who labeled or verified an annotation might be useful for
 * reward team members for doing lots of labeling
 * split labels by who trained them to see which network gets the best accuracy
 
+![plot1](plots/25.png)
+
 ### Relabeling/Editing (Q26)
 * Editing existing labels should be possible
 * already talked about in verification
+
+![plot1](plots/26.png)
 
 ### Merging of labels from different classification systems (Q27)
 * Two networks classify images, only differences get shown to the user
 * Dutch Nao Team used it for classification, not for object detection (i.e. no pixel problems)
 * „Conflict Resolution System“ to select which label is good enough
 
+![plot1](plots/27.png)
+
 ### Conversion between annotation types (Q28)
 * is currently not needed, but relatively easy to implement for some conversions
 	* others are really hard or impossible
+
+![plot1](plots/28.png)
 
 ## Final Discussion
 Tools for simple classifification (e.g. is this image a ball) should be handled in a different mode
