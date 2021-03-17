@@ -11,5 +11,5 @@ for p in data:
     single_data = p[3:].astype(np.int)
     plt.bar([0,1,2,3,4,5], single_data, tick_label=boxes)
     plt.title("Q" +  str(id) + ": " + title + "\nReponses: " + str(total), wrap=True)
-    plt.savefig("plots/" + str(id))
+    plt.savefig("plots/" + str(id), bbox_inches='tight')
     plt.close()
